@@ -1,0 +1,86 @@
+body
+{
+    background-image:url(../media/white_wall.png);
+}
+.btn-lg
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+.container hr
+{
+    height: 1px;
+    background-color: gainsboro;
+}
+.icon-background-travel
+{
+    color: #40c040;
+}
+.icon-circle-travel
+{
+    color : #c0ffc0;
+}
+.icon-background-sport
+{
+    color: lightskyblue;
+}
+.icon-circle-sport
+{
+    color: dodgerblue;
+}
+.icon-background-business
+{
+    color: #c0c0ff;
+}
+.icon-circle-business
+{
+    color: mediumpurple;
+}
+.list-group
+{
+    padding-left: 10px;
+}
+#web_skills, #support_skills, #code_skills, #network-system_skills, #sgbd_skills, #utils_skills, #project_skills, #language_skills
+{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.ripple
+{
+    position: absolute;
+    opacity: 1;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .35);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(165);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(165);
+    }
+}
+
+nav div div ul li
+{
+    overflow: hidden;
+}
