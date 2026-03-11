@@ -3,6 +3,7 @@ name: Build and Deploy React App
 on:
   push:
     branches: [ "feature/**" ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
