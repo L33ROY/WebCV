@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Badge, Col, Container, Figure, Row } from 'react-bootstrap';
 import { Trans, useTranslation } from 'react-i18next';
-import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import deliveroo from '../assets/deliveroo.png';
 import mcdonalds from '../assets/mcdonalds.png';
 import peip from '../assets/peip.png';
@@ -98,11 +98,11 @@ export const History: FC = () => {
                     <Badge><h2 className="mytitle titles rounded ">{t('navbar.history')}</h2></Badge>
                 </Col>
             </Row>
-            <Timeline lineColor={'#ddd'}>
+            <VerticalTimeline lineColor={'#ddd'}>
                 {historyItems.map((historyItem, idx) => {
                     const picture = pictures.get(idx)
                     return (
-                        <TimelineItem
+                        <VerticalTimelineElement
                             key={idx}
                             dateText={historyItem.date}
                             style={historyItem.job ? { color: '#e86971' } : { color: '#61b8ff' }}
@@ -133,10 +133,10 @@ export const History: FC = () => {
                                     <strong></strong> {historyItem.body}
                                 </Trans>
                             </p>
-                        </TimelineItem>
+                        </VerticalTimelineElement>
                     )
                 })}
-            </Timeline>
+            </VerticalTimeline>
         </Container>
     )
 }
