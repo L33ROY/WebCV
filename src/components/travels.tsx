@@ -38,11 +38,51 @@ function MapEvents({ onZoom }: { onZoom: (z: number) => void }) {
   return null;
 }
 
+/* --------------------------- MARKERS LAYER --------------------------- */
+
+const MarkersLayer: FC<{
+  zoom: number;
+  markersAdded: boolean;
+  setMarkersAdded: (v: boolean) => void;
+}> = ({ zoom, markersAdded, setMarkersAdded }) => {
+  const { t } = useTranslation();
+  const map = useMap();
+
+  useEffect(() => {
+    if (!map) return;
+
+    if (zoom >= 4 && !markersAdded) {
+      cities.forEach((c: Position) => {
+        L.marker(c.latlng)
+          .addTo(map)
+          .bindTooltip(
+            Array.isArray(c.tooltip)
+              ? c.tooltip.map((tt) => t(tt)).join(", ")
+              : t(c.tooltip)
+          );
+      });
+
+      setMarkersAdded(true);
+    }
+
+    if (zoom < 4 && markersAdded) {
+      map.eachLayer((layer: Layer) => {
+        if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+
+      setMarkersAdded(false);
+    }
+  }, [zoom, map, markersAdded, setMarkersAdded, t]);
+
+  return null;
+};
+
 /* --------------------------- CUSTOM MAP --------------------------- */
 
 const CustomMap: FC = () => {
   const { t } = useTranslation();
-  const map = useMap();
 
   const [markersAdded, setMarkersAdded] = useState(false);
   const [state, setState] = useState<State>({
@@ -50,9 +90,8 @@ const CustomMap: FC = () => {
     displayGeoJson: true,
   });
 
-  /* --------------------------- GEOJSON --------------------------- */
-
-  const data: geojson.FeatureCollection = geoJsonData as geojson.FeatureCollection;
+  const data: geojson.FeatureCollection =
+    geoJsonData as geojson.FeatureCollection;
 
   const geoJson = useMemo(
     () => (
@@ -90,38 +129,6 @@ const CustomMap: FC = () => {
     [data, t]
   );
 
-  /* --------------------------- MARKERS LOGIC --------------------------- */
-
-  useEffect(() => {
-    if (!map) return;
-
-    if (state.zoom >= 4 && !markersAdded) {
-      cities.forEach((c: Position) => {
-        L.marker(c.latlng)
-          .addTo(map)
-          .bindTooltip(
-            Array.isArray(c.tooltip)
-              ? c.tooltip.map((tt) => t(tt)).join(", ")
-              : t(c.tooltip)
-          );
-      });
-
-      setMarkersAdded(true);
-    }
-
-    if (state.zoom < 4 && markersAdded) {
-      map.eachLayer((layer: Layer) => {
-        if (layer instanceof L.Marker) {
-          map.removeLayer(layer);
-        }
-      });
-
-      setMarkersAdded(false);
-    }
-  }, [state.zoom, map, markersAdded, t]);
-
-  /* --------------------------- ZOOM HANDLER --------------------------- */
-
   const handleZoomChange = (zoom: number) => {
     setState((prev) => ({
       ...prev,
@@ -129,8 +136,6 @@ const CustomMap: FC = () => {
       displayGeoJson: zoom < 4,
     }));
   };
-
-  /* --------------------------- RENDER --------------------------- */
 
   return (
     <MapContainer
@@ -140,9 +145,13 @@ const CustomMap: FC = () => {
     >
       <MapEvents onZoom={handleZoomChange} />
 
-      <TileLayer
-        url="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=TON_TOKEN"
+      <MarkersLayer
+        zoom={state.zoom}
+        markersAdded={markersAdded}
+        setMarkersAdded={setMarkersAdded}
       />
+
+      <TileLayer url="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=TON_TOKEN" />
 
       {state.displayGeoJson && geoJson}
     </MapContainer>
