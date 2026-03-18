@@ -1,6 +1,8 @@
 import 'animate.css/animate.min.css';
 import React, { FC, ReactElement, Suspense } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Button, Col,
   Container,
@@ -172,37 +174,41 @@ const Footer: FC = () => {
 
 // page uses the hook
 const Page: FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true
+    });
+  }, []);
+
   return (
     <div id="App" className="App">
       <MyNavbar />
 
       <AppHeader />
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true} >
-        <section className="grey">
-          <Projects />
-        </section>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-        <section>
-          <History />
-        </section>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-        <section className="grey">
-          <Hobbies />
-        </section>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-        <section>
-          <Travels />
-        </section>
-      </ScrollAnimation>
+
+      <section className="grey" data-aos="fade-in">
+        <Projects />
+      </section>
+
+      <section data-aos="fade-in">
+        <History />
+      </section>
+
+      <section className="grey" data-aos="fade-in">
+        <Hobbies />
+      </section>
+
+      <section data-aos="fade-in">
+        <Travels />
+      </section>
+
       <section className="App-footer">
         <Footer />
       </section>
-    </div >
+    </div>
   );
-}
+};
 
 // loading component for suspense fallback
 const Loader = (): ReactElement => (

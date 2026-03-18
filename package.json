@@ -4,39 +4,36 @@
   "private": true,
   "dependencies": {
     "@types/geojson": "^7946.0.7",
-    "@types/jest": "^25.1.5",
-    "@types/leaflet": "^1.5.12",
-    "@types/node": "^13.11.0",
-    "@types/react": "^16.9.32",
-    "@types/react-animate-on-scroll": "^2.1.2",
-    "@types/react-dom": "^16.9.6",
-    "@types/react-leaflet": "^2.5.1",
-    "@types/react-scroll": "^1.5.4",
-    "animate.css": "^3.7.2",
-    "bootstrap": "^4.4.1",
-    "i18next": "18.0.0",
-    "i18next-browser-languagedetector": "4.0.0",
-    "i18next-xhr-backend": "3.2.0",
-    "leaflet": "^1.6.0",
-    "moment": "^2.29.1",
-    "react": "^16.11.0",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-bootstrap": "^1.0.0",
-    "react-dom": "^16.11.0",
-    "react-i18next": "^11.18.6",
-    "react-icons": "^3.9.0",
-    "react-leaflet": "^2.6.3",
+    "@types/jest": "^29.5.0",
+    "@types/leaflet": "^1.9.8",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@types/react-scroll": "^1.8.7",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.2",
+    "i18next": "^23.10.0",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.7.3",
+    "leaflet": "^1.9.4",
+    "moment": "^2.30.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.5.0",
+    "react-icons": "^4.12.0",
+    "react-leaflet": "^4.2.1",
     "react-scripts": "^5.0.1",
-    "react-scroll": "^1.7.16",
+    "react-scroll": "^1.9.0",
     "react-vertical-timeline-component": "^4.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "^4.9.5"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "development": [
@@ -51,20 +48,8 @@
       "not ie < 11"
     ]
   },
-  "resolve": {
-    "extensions": [
-      ".js",
-      ".json",
-      ".ts",
-      ".tsx"
-    ]
-  },
   "devDependencies": {
-    "@types/react-i18next": "^8.1.0",
-    "prettier": "^2.0.4",
-    "tslint": "^6.1.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.3.0",
-    "tslint-react": "^5.0.0"
+    "@types/aos": "^3.0.7",
+    "prettier": "^3.2.5"
   }
 }

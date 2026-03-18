@@ -137,89 +137,78 @@ const TranslationButton: FC<{ onClick: () => void }> = ({ onClick }) => {
     const { t, i18n } = useTranslation();
 
     /**
-    * Get a language code from the i18n current language
-    */
-    const getShortLanguage = (language: any): string => {
-        if (language.includes('fr')) {
-            return 'fr';
-        } else if (language.includes('de')) {
-            return 'de';
-        } else {
-            return 'en';
-        }
-    }
+     * Get short language safely
+     */
+    const getShortLanguage = (language?: string): string => {
+        if (!language) return "en";
 
-    const [state, setState] = useState<{ langShort: string }>({
-        langShort: getShortLanguage(i18n.language),
-    });
+        if (language.includes("fr")) return "fr";
+        if (language.includes("de")) return "de";
+        return "en";
+    };
 
+    const [langShort, setLangShort] = useState<string>(
+        getShortLanguage(i18n.language)
+    );
 
     /**
-    * Switch language between en, fr and de
-    */
+     * Switch language
+     */
     const changeLanguage = useCallback(
-        (lng: string): void => {
-            if (!i18n) {
-                return;
-            }
+        (lng: string) => {
             i18n.changeLanguage(lng);
         },
         [i18n]
     );
 
     /**
-    * When we click on the translate button, we switch the button label, and switch the language
-    */
-    const handleClick = (language: string): void => {
-        setState({
-            langShort: language,
-        });
+     * Handle click
+     */
+    const handleClick = (language: string) => {
+        setLangShort(language);
         changeLanguage(language);
-        // Toggle navbar
         onClick();
     };
 
-    /*
-    * Get the full language name from the code
-    */
     const getLangFull = (lang: string): string => {
         switch (lang) {
-            case 'fr':
-                return t('languages.french');
-            case 'de':
-                return t('languages.german');
+            case "fr":
+                return t("languages.french");
+            case "de":
+                return t("languages.german");
             default:
-                return t('languages.english');
+                return t("languages.english");
         }
-    }
+    };
 
     return (
-        <NavDropdown title={
-            <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 0, hide: 0 }}
-                overlay={renderTooltip(t('translationTooltip'))}
-            >
-                <span className="m-auto">
-                    <MdTranslate className=" mr-2 myIcon" />{getLangFull(state.langShort)}
-                </span>
-            </OverlayTrigger>}
-            id="basic-nav-dropdown" className="m-auto mr-md-5">
-            <NavDropdown.Item className="text-center" onClick={() => { handleClick('fr') }}>
-                <div>
-                    {t('languages.french')}
-                </div>
+        <NavDropdown
+            title={
+                <OverlayTrigger
+                    placement="bottom"
+                    delay={{ show: 0, hide: 0 }}
+                    overlay={renderTooltip(t("translationTooltip"))}
+                >
+                    <span className="m-auto">
+                        <MdTranslate className="mr-2 myIcon" />
+                        {getLangFull(langShort)}
+                    </span>
+                </OverlayTrigger>
+            }
+            id="translation-dropdown"
+            className="m-auto mr-md-5"
+        >
+            <NavDropdown.Item onClick={() => handleClick("fr")}>
+                {t("languages.french")}
             </NavDropdown.Item>
-            <NavDropdown.Item className="text-center" onClick={() => { handleClick('en') }}>
-                <div>
-                    {t('languages.english')}
-                </div>
+
+            <NavDropdown.Item onClick={() => handleClick("en")}>
+                {t("languages.english")}
             </NavDropdown.Item>
-            <NavDropdown.Item className="text-center" onClick={() => { handleClick('de') }}>
-                <div>
-                    {t('languages.german')}
-                </div>
+
+            <NavDropdown.Item onClick={() => handleClick("de")}>
+                {t("languages.german")}
             </NavDropdown.Item>
         </NavDropdown>
     );
-}
+};

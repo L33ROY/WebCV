@@ -90,53 +90,67 @@ export const History: FC = () => {
             }],
         ]
     )
-    const historyItems: HistoryItem[] = t("history", { returnObjects: true })
+    const rawHistory = t("history", { returnObjects: true });
+
+    const historyItems: HistoryItem[] = Array.isArray(rawHistory)
+    ? (rawHistory as HistoryItem[])
+    : [];
+
     return (
-        <Container id="History" className="pt-5">
-            <Row className="mb-4 justify-content-center">
-                <Col xs={true} md={8} className="pt-2 pb-2">
-                    <Badge><h2 className="mytitle titles rounded ">{t('navbar.history')}</h2></Badge>
-                </Col>
-            </Row>
-            <VerticalTimeline lineColor={'#ddd'}>
-                {historyItems.map((historyItem, idx) => {
-                    const picture = pictures.get(idx)
-                    return (
-                        <VerticalTimelineElement
-                            key={idx}
-                            dateText={historyItem.date}
-                            style={historyItem.job ? { color: '#e86971' } : { color: '#61b8ff' }}
-                            dateInnerStyle={historyItem.job ? {} : { background: '#61b8ff', color: '#000' }}
-                            bodyContainerStyle={historyItem.job ? {
-                                background: '#ddd',
-                                padding: '20px',
-                                borderRadius: '8px',
-                                boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-                            } : {}}
-                            className="longDate"
-                        >
-                            <h4>{historyItem.title}</h4>
-                            {picture &&
-                                <a href={picture.url} target="_blank" rel="noopener noreferrer">
-                                    <Figure className="mt-4">
-                                        <Figure.Image
-                                            height={picture.height}
-                                            width={picture.width}
-                                            alt={picture.name}
-                                            src={picture.icon}
-                                        />
-                                    </Figure>
-                                </a>
-                            }
-                            <p className="text-left">
-                                <Trans i18nKey={`history[${idx}].body`}>
-                                    <strong></strong> {historyItem.body}
-                                </Trans>
-                            </p>
-                        </VerticalTimelineElement>
-                    )
-                })}
-            </VerticalTimeline>
-        </Container>
-    )
+    <Container id="History" className="pt-5">
+        <Row className="mb-4 justify-content-center">
+        <Col xs={true} md={8} className="pt-2 pb-2">
+            <Badge>
+            <h2 className="mytitle titles rounded">
+                {t("navbar.history")}
+            </h2>
+            </Badge>
+        </Col>
+        </Row>
+
+        <VerticalTimeline lineColor={"#ddd"}>
+        {historyItems.map((historyItem, idx) => {
+            const picture = pictures.get(idx);
+
+            return (
+            <VerticalTimelineElement
+                key={idx}
+                dateText={historyItem.date}
+                style={
+                historyItem.job
+                    ? { color: "#e86971" }
+                    : { color: "#61b8ff" }
+                }
+                className="longDate"
+            >
+                <h4>{historyItem.title}</h4>
+
+                {picture && (
+                <a
+                    href={picture.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Figure className="mt-4">
+                    <Figure.Image
+                        height={picture.height}
+                        width={picture.width}
+                        alt={picture.name}
+                        src={picture.icon}
+                    />
+                    </Figure>
+                </a>
+                )}
+
+                <p className="text-left">
+                <Trans i18nKey={`history[${idx}].body`}>
+                    <strong></strong> {historyItem.body}
+                </Trans>
+                </p>
+            </VerticalTimelineElement>
+            );
+        })}
+        </VerticalTimeline>
+    </Container>
+    );
 }
