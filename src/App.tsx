@@ -47,7 +47,7 @@ const LeftHeader: FC = () => {
         </Col>
         <Col md={12} className="align-self-center pt-3 pt-md-0 pb-3 pb-md-0 mt-md-5 pr-0 pl-0">
           <div className="name">
-            <h5>CNAM Alsace</h5>
+            <h5>CNAM Grand-Est</h5>
           </div>
           <div>
             <h5>{t('me.livesIn')}</h5>
