@@ -1,8 +1,5 @@
 import ANGULAR from '../assets/angular.png';
-import ARDUINO from '../assets/arduino.svg';
-import ARM from '../assets/arm2.png';
 import BOOTSTRAP from '../assets/bootstrap.png';
-import C from '../assets/c.png';
 import CSS from '../assets/css.png';
 import GIT from '../assets/git.png';
 import HTML from '../assets/html.png';
@@ -18,29 +15,9 @@ import POSTGRES from '../assets/postgres.webp';
 import REACT from '../assets/react.svg';
 import SPRING from '../assets/spring.png';
 import SQL from '../assets/sql.png';
+import WEBMETHODS from '../assets/webMethods.png';
 import { Skills } from './skills';
 import { Position } from './travels';
-
-export const system: Skills = {
-  title: 'skills.system',
-  skills: [
-    {
-      image: C,
-      href: 'https://en.wikipedia.org/wiki/C_(programming_language)',
-      tooltip: 'C'
-    },
-    {
-      image: ARM,
-      href: 'https://www.arm.com/products/silicon-ip-cpu',
-      tooltip: 'ARM'
-    },
-    {
-      image: ARDUINO,
-      href: 'https://www.arduino.cc/',
-      tooltip: 'Arduino'
-    }
-  ]
-};
 
 export const software: Skills = {
   title: 'skills.software',
@@ -49,6 +26,18 @@ export const software: Skills = {
       image: JAVA,
       href: 'https://www.java.com/fr/',
       tooltip: 'Java'
+    }
+  ]
+};
+
+export const esb: Skills = {
+  title: 'skills.esb',
+  skills: [
+    {
+      image: WEBMETHODS,
+      href: 'https://www.ibm.com/fr-fr/products/webmethods-integration',
+      tooltip: 'Software AG / IBM webMethods',
+      size: 96
     }
   ]
 };
@@ -157,309 +146,264 @@ export const extraSkills: Skills = {
 // List of position and label of tooltip for the GeoJson object, for each country
 export const countries: { [key: string]: Position } = {
   DEU: {
-    latlng: {
-      lat: 51.0834196,
-      lng: 10.4234469,
-    },
+    latlng: { lat: 51.0834196, lng: 10.4234469 },
     tooltip: [
-      'travel.germany.munich',
       'travel.germany.berlin',
-      'travel.germany.hamburg',
-      'travel.germany.munster',
-      'travel.germany.country',
+      'travel.germany.frankfurt',
+      'travel.germany.speyer',
+      'travel.germany.heidelberg',
+      'travel.germany.country'
     ]
   },
   CZE: {
-    latlng: {
-      lat: 49.667628,
-      lng: 15.326962,
-    },
+    latlng: { lat: 49.667628, lng: 15.326962 },
     tooltip: [
       'travel.tchequie.prague',
-      'travel.tchequie.country',
-    ]
-  },
-  BEL: {
-    latlng: {
-      lat: 50.6402809,
-      lng: 4.6667145,
-    },
-    tooltip: [
-      'travel.belgium.brussels',
-      'travel.belgium.liege',
-      'travel.belgium.country',
-    ]
-  },
-  CAN: {
-    latlng: {
-      lat: 46.825754,
-      lng: -71.20849,
-    },
-    tooltip: [
-      'travel.canada.montreal',
-      'travel.canada.quebec',
-      'travel.canada.sherbrooke',
-      'travel.canada.tadoussac',
-      'travel.canada.country',
+      'travel.tchequie.country'
     ]
   },
   ESP: {
-    latlng: {
-      lat: 40.463669,
-      lng: -3.749220,
-    },
+    latlng: { lat: 40.463669, lng: -3.749220 },
     tooltip: [
       'travel.spain.barcelona',
-      'travel.spain.palma',
-      'travel.spain.country',
-    ]
-  },
-  ITA: {
-    latlng: {
-      lat: 42.6384261,
-      lng: 12.674297,
-    },
-    tooltip: [
-      'travel.italy.roma',
-      'travel.italy.naples',
-      'travel.italy.pompei',
-      'travel.italy.country',
-    ]
-  },
-  GRC: {
-    latlng: {
-      lat: 38.9953683,
-      lng: 21.9877132,
-    },
-    tooltip: [
-      'travel.greece.athens',
-      'travel.greece.corinth',
-      'travel.greece.country',
-    ]
-  },
-  USA: {
-    latlng: {
-      lat: 42.92121887207031,
-      lng: -75.62081909179688,
-    },
-    tooltip:
-      ['travel.us.ny',
-        'travel.us.country'
-      ]
-  },
-  IRL: {
-    latlng: {
-      lat: 52.865196,
-      lng: -7.9794599,
-    },
-    tooltip: [
-      'travel.uk.ireland',
-      'travel.uk.country',
+      'travel.spain.alicante',
+      'travel.spain.calpe',
+      'travel.spain.altea',
+      'travel.spain.country'
     ]
   },
   FRA: {
-    latlng: {
-      lat: 43.2961743,
-      lng: 5.3699525,
-    },
+    latlng: { lat: 46.2276380, lng: 2.2137490 },
     tooltip: [
       'travel.fr.marseille',
-      'travel.fr.country',
+      'travel.fr.montpellier',
+      'travel.fr.mont_saint_michel',
+      'travel.fr.limoges',
+      'travel.fr.tours',
+      'travel.fr.lille',
+      'travel.fr.country'
     ]
   },
-  SWE: {
-    latlng: {
-      lat: 59.6749712,
-      lng: 14.5208584,
-    },
+  NLD: {
+    latlng: { lat: 52.1326340, lng: 5.2912660 },
     tooltip: [
-      'travel.sweden.stockholm',
-      'travel.sweden.country',
+      'travel.netherlands.amsterdam',
+      'travel.netherlands.country'
+    ]
+  },
+  HRV: {
+    latlng: { lat: 45.1000000, lng: 15.2000000 },
+    tooltip: [
+      'travel.croatia.dubrovnik',
+      'travel.croatia.country'
+    ]
+  },
+  POL: {
+    latlng: { lat: 51.9189046, lng: 19.1343786 },
+    tooltip: [
+      'travel.poland.warsaw',
+      'travel.poland.wroclaw',
+      'travel.poland.country'
+    ]
+  },
+  AUT: {
+    latlng: { lat: 47.5162000, lng: 14.5501000 },
+    tooltip: [
+      'travel.austria.ischgl',
+      'travel.austria.mayrhofen',
+      'travel.austria.country'
+    ]
+  },
+  TUR: {
+    latlng: { lat: 38.9637010, lng: 35.2433290 },
+    tooltip: [
+      'travel.turkey.country'
+    ]
+  },
+  BIH: {
+    latlng: { lat: 43.9159, lng: 17.6791 },
+    tooltip: [
+      'travel.bosnia.mostar',
+      'travel.bosnia.country'
     ]
   }
 };
 
 // List of position and tooltip for the cities Markers
 export const cities: Position[] = [
+  // Germany
   {
-    latlng: {
-      lat: 48.13825988769531,
-      lng: 11.584508895874023,
-    },
-    tooltip: 'travel.germany.munich',
+    latlng: { lat: 52.51763153076172, lng: 13.40965747833252 },
+    tooltip: 'travel.germany.berlin'
   },
   {
-    latlng: {
-      lat: 52.51763153076172,
-      lng: 13.40965747833252,
-    },
-    tooltip: 'travel.germany.berlin',
+    latlng: { lat: 50.1109221, lng: 8.6821267 },
+    tooltip: 'travel.germany.frankfurt'
   },
   {
-    // germany
-    latlng: {
-      lat: 53.56729507446289,
-      lng: 9.941673278808594,
-    },
-    tooltip: 'travel.germany.hamburg',
+    latlng: { lat: 49.3170, lng: 8.4330 },
+    tooltip: 'travel.germany.speyer'
   },
   {
-    // germany
-    latlng: {
-      lat: 51.960906982421875,
-      lng: 7.628866195678711,
-    },
-    tooltip: 'travel.germany.munster',
+    latlng: { lat: 49.3988, lng: 8.6724 },
+    tooltip: 'travel.germany.heidelberg'
   },
-  {
-    // tchequie
-    latlng: {
-      lat: 50.05708312988281,
-      lng: 14.44813060760498,
-    },
-    tooltip: 'travel.tchequie.prague',
-  },
-  {
-    // belgium
-    latlng: {
-      lat: 50.6451381,
-      lng: 5.5734203,
-    },
-    tooltip: 'travel.belgium.liege',
-  },
-  {
-    // belgium
-    latlng: {
-      lat: 50.8436709,
-      lng: 4.3674367,
-    },
-    tooltip: 'travel.belgium.brussels',
-  },
-  {
-    // canada
-    latlng: {
-      lat: 45.509063720703125,
-      lng: -73.55335998535156,
-    },
-    tooltip: 'travel.canada.montreal',
-  },
-  {
-    // canada
-    latlng: {
-      lat: 46.825754,
-      lng: -71.20849,
-    },
-    tooltip: 'travel.canada.quebec',
-  },
-  {
-    // canada
-    latlng: {
-      lat: 48.1433429,
-      lng: -69.7174574,
-    },
-    tooltip: 'travel.canada.tadoussac',
-  },
-  {
-    // canada
-    latlng: {
-      lat: 45.40139389038086,
-      lng: -71.89034271240234,
 
-    },
-    tooltip: 'travel.canada.sherbrooke',
-  },
+  // Czech Republic
   {
-    // spain
-    latlng: {
-      lat: 39.61391960090061,
-      lng: 2.9746341705322266,
+    latlng: { lat: 50.05708312988281, lng: 14.44813060760498 },
+    tooltip: 'travel.tchequie.prague'
+  },
 
-    },
-    tooltip: 'travel.spain.palma',
+  // Spain
+  {
+    latlng: { lat: 41.39219284057617, lng: 2.164867401123047 },
+    tooltip: 'travel.spain.barcelona'
   },
   {
-    // spain
-    latlng: {
-      lat: 41.39219284057617,
-      lng: 2.164867401123047,
+    latlng: { lat: 38.3451500, lng: -0.4814900 },
+    tooltip: 'travel.spain.alicante'
+  },
+  {
+    latlng: { lat: 38.6444900, lng: 0.0452200 },
+    tooltip: 'travel.spain.calpe'
+  },
+  {
+    latlng: { lat: 38.6040500, lng: -0.0483400 },
+    tooltip: 'travel.spain.altea'
+  },
 
-    },
-    tooltip: 'travel.spain.barcelona',
+  // France
+  {
+    latlng: { lat: 43.2961743, lng: 5.3699525 },
+    tooltip: 'travel.fr.marseille'
   },
   {
-    // italy
-    latlng: {
-      lat: 41.8892936706543,
-      lng: 12.493546485900879,
+    latlng: { lat: 43.6112422, lng: 3.8767337 },
+    tooltip: 'travel.fr.montpellier'
+  },
+  {
+    latlng: { lat: 48.6359541, lng: -1.5114422 },
+    tooltip: 'travel.fr.mont_saint_michel'
+  },
+  {
+    latlng: { lat: 45.8354243, lng: 1.2647529 },
+    tooltip: 'travel.fr.limoges'
+  },
+  {
+    latlng: { lat: 47.3900474, lng: 0.6889268 },
+    tooltip: 'travel.fr.tours'
+  },
+  {
+    latlng: { lat: 50.6365654, lng: 3.0635282 },
+    tooltip: 'travel.fr.lille'
+  },
+  {
+    latlng: { lat: 45.5060, lng: 6.6770 },
+    tooltip: 'travel.fr.la_plagne'
+  },
+  {
+    latlng: { lat: 46.1920, lng: 6.7760 },
+    tooltip: 'travel.fr.avoriaz'
+  },
+  {
+    latlng: { lat: 45.2970, lng: 6.5800 },
+    tooltip: 'travel.fr.val_thorens'
+  },
+  {
+    latlng: { lat: 45.5440, lng: 3.2490 },
+    tooltip: 'travel.fr.issoire'
+  },
+  {
+    latlng: { lat: 47.0810, lng: 2.3980 },
+    tooltip: 'travel.fr.bourges'
+  },
+  {
+    latlng: { lat: 45.7772, lng: 3.0870 },
+    tooltip: 'travel.fr.clermont_ferrand'
+  },
+  {
+    latlng: { lat: 49.4190, lng: 0.2320 },
+    tooltip: 'travel.fr.honfleur'
+  },
+  {
+    latlng: { lat: 49.4944, lng: 0.1079 },
+    tooltip: 'travel.fr.le_havre'
+  },
+  {
+    latlng: { lat: 43.2480, lng: 3.2900 },
+    tooltip: 'travel.fr.valras_plage'
+  },
+  {
+    latlng: { lat: 43.5210, lng: 4.1370 },
+    tooltip: 'travel.fr.port_camargue'
+  },
+  {
+    latlng: { lat: 48.5890, lng: 0.6560 },
+    tooltip: 'travel.fr.tourouvre'
+  },
+  {
+    latlng: { lat: 49.1596, lng: 5.3843 },
+    tooltip: 'travel.fr.verdun'
+  },
 
-    },
-    tooltip: 'travel.italy.roma',
-  },
+  // Netherlands
   {
-    // italy
-    latlng: {
-      lat: 40.83998489379883,
-      lng: 14.252542495727539,
-    },
-    tooltip: 'travel.italy.naples',
+    latlng: { lat: 52.3675734, lng: 4.9041389 },
+    tooltip: 'travel.netherlands.amsterdam'
   },
-  {
-    // italy
-    latlng: {
-      lat: 40.74886703491211,
-      lng: 14.501250267028809,
 
-    },
-    tooltip: 'travel.italy.pompei',
-  },
+  // Croatia
   {
-    // greece
-    latlng: {
-      lat: 37.99076843261719,
-      lng: 23.74122428894043,
-    },
-    tooltip: 'travel.greece.athens',
+    latlng: { lat: 42.6507197, lng: 18.0943534 },
+    tooltip: 'travel.croatia.dubrovnik'
   },
-  {
-    // greece
-    latlng: {
-      lat: 37.938621520996094,
-      lng: 22.92695426940918,
 
-    },
-    tooltip: 'travel.greece.corinth',
+  // Poland
+  {
+    latlng: { lat: 52.2296756, lng: 21.0122287 },
+    tooltip: 'travel.poland.warsaw'
   },
   {
-    // us
-    latlng: {
-      lat: 42.92121887207031,
-      lng: -75.62081909179688,
-    },
-    tooltip: 'travel.us.ny',
+    latlng: { lat: 51.1000000, lng: 17.0333300 },
+    tooltip: 'travel.poland.wroclaw'
   },
-  {
-    // uk
-    latlng: {
-      lat: 52.865196,
-      lng: -7.9794599,
 
-    },
-    tooltip: 'travel.uk.ireland',
+  // Austria
+  {
+    latlng: { lat: 47.0151800, lng: 10.2915700 },
+    tooltip: 'travel.austria.ischgl'
   },
   {
-    // fr
-    latlng: {
-      lat: 43.2961743,
-      lng: 5.3699525,
-    },
-    tooltip: 'travel.fr.marseille',
+    latlng: { lat: 47.1667000, lng: 11.8667000 },
+    tooltip: 'travel.austria.mayrhofen'
+  },
+
+  // Turkey
+  {
+    latlng: { lat: 41.0082, lng: 28.9784 },
+    tooltip: 'travel.turkey.istanbul'
   },
   {
-    // sweden
-    latlng: {
-      lat: 59.32796859741211,
-      lng: 18.05364227294922,
-    },
-    tooltip: 'travel.sweden.stockholm',
+    latlng: { lat: 39.9334, lng: 32.8597 },
+    tooltip: 'travel.turkey.ankara'
+  },
+  {
+    latlng: { lat: 38.4000, lng: 26.7833 },
+    tooltip: 'travel.turkey.mordogan'
+  },
+  {
+    latlng: { lat: 38.4237, lng: 27.1428 },
+    tooltip: 'travel.turkey.izmir'
+  },
+  {
+    latlng: { lat: 37.9244, lng: 29.1170 },
+    tooltip: 'travel.turkey.pamukkale'
+  },
+
+  // Bosnia and Herzegovina
+  {
+    latlng: { lat: 43.3438, lng: 17.8078 },
+    tooltip: 'travel.bosnia.mostar'
   },
 ];

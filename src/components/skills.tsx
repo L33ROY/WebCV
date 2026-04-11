@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { renderTooltip } from '../utils';
-import { extraSkills, others, software, system, web } from './constant';
+import { extraSkills, others, software, web, esb } from './constant';
 
 interface Skill {
   image: string;
@@ -58,7 +58,7 @@ const Skill: FC<{ skill: Skill }> = ({ skill }) => {
 export const Skills: FC<{ skillName?: string }> = ({ skillName }) => {
   const { t } = useTranslation();
 
-  const list: Skills[][] = [[system, software], [web, others]];
+  const list: Skills[][] = [[software, esb], [web, others]];
 
   // We want to display all the skills
   if (!skillName) {
@@ -66,7 +66,7 @@ export const Skills: FC<{ skillName?: string }> = ({ skillName }) => {
       <div id="Skills" className="text-center pt-5 pt-md-2 pr-0 pr-md-5">
         <Row className=" justify-content-center">
           <Col md={6} xs={8} className="pt-2 pb-2  rounded">
-            <Badge className="titleReverse pl-3 pr-3"><h2 >{t('navbar.skill')}</h2></Badge>
+            <Badge className="titleReverse pl-3 pr-3"><h2>{t('navbar.skill')}</h2></Badge>
           </Col>
         </Row>
         {list.map((row: Skills[]): ReactElement => {

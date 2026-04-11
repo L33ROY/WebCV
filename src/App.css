@@ -110,3 +110,20 @@ h2 {
 .copyright {
   border-radius: .25rem!important;
 }
+
+@media (min-width: 1170px) {
+  .vertical-timeline-element-date {
+    color: #555 !important;
+    opacity: 1 !important;
+  }
+
+  /* Éléments à GAUCHE — date alignée à gauche */
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(odd) .vertical-timeline-element-date {
+    text-align: left !important;
+  }
+
+  /* Éléments à DROITE — date alignée à gauche aussi */
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even) .vertical-timeline-element-date {
+    text-align: right !important;
+  }
+}

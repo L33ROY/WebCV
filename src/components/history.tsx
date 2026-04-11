@@ -1,156 +1,177 @@
 import React, { FC } from 'react';
 import { Badge, Col, Container, Figure, Row } from 'react-bootstrap';
 import { Trans, useTranslation } from 'react-i18next';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import deliveroo from '../assets/deliveroo.png';
-import mcdonalds from '../assets/mcdonalds.png';
-import peip from '../assets/peip.png';
-import sebben from '../assets/sebben.png';
-
-import carsatam from '../assets/company/logo_carsat-am.png';
-import cnam from '../assets/education/logo_cnam.jpg';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { MdWork, MdSchool, MdStar } from 'react-icons/md';
+import carsatam from '../assets/company/carsat-am.png';
+import fml from '../assets/company/fml.png';
+import cnam from '../assets/education/le-cnam-grand-est.png';
+import orsay from '../assets/company/orsay.png';
+import orsay_old from '../assets/company/orsay-old.png';
+import am from '../assets/education/andre-maurois.png';
+import ulp from '../assets/education/universite-louis-pasteur.png';
+import uds from '../assets/education/uds.png';
+import ah from '../assets/education/alphonse-heinrich.png';
 
 type HistoryItem = {
-    date: string,
-    title: string,
-    body: string,
-    job: boolean
+  date: string,
+  title: string,
+  body: string,
+  job: boolean
 }
 
 type PictureInfo = {
-    icon: string,
-    url?: string,
-    width: string,
-    height: string,
-    name: string
+  icon: string,
+  url?: string,
+  width: string,
+  height: string,
+  name: string
 }
 
-/**
-* Contains Education and professionnal experience
-*/
+const JOB_COLOR = 'rgb(33, 149, 243)';
+const EDU_COLOR = 'rgb(233, 30, 99)';
+
 export const History: FC = () => {
-    const { t } = useTranslation()
+  const { t, i18n } = useTranslation();
 
-    const pictures = new Map<number, PictureInfo>(
-        [
-            [0, {
-                icon: carsatam,
-                url: "https://www.carsat-alsacemoselle.fr/",
-                height: "120px",
-                width: "120px",
-                name: "Carsat Alsace-Moselle"
-            }],
-            [1, {
-                icon: cnam,
-                url: "http://formation.cnam.fr/rechercher-par-metier/diplome-d-ingenieur-specialite-informatique-systemes-d-information-isi--200645.kjsp?RF=newcat_metiers",
-                height: "120px",
-                width: "120px",
-                name: "Conservatoire National des Arts et Métiers"
-            }],
-            [2, {
-                icon: carsatam,
-                url: "https://www.carsat-alsacemoselle.fr/",
-                height: "120px",
-                width: "120px",
-                name: "Carsat Alsace-Moselle"
-            }],
-            [3, {
-                icon: carsatam,
-                url: "https://www.carsat-alsacemoselle.fr/",
-                height: "120px",
-                width: "120px",
-                name: "Carsat Alsace-Moselle"
-            }],
-            [4, {
-                icon: mcdonalds,
-                url: "https://www.mcdonalds.fr/",
-                height: "80px",
-                width: "80px",
-                name: "McDonald's"
-            }],
-            [5, {
-                icon: deliveroo,
-                url: "https://deliveroo.fr",
-                height: "80px",
-                width: "80px",
-                name: "Deliveroo"
-            }],
-            [6, {
-                icon: peip,
-                url: "https://polytech.univ-amu.fr/formations/cycle-preparatoire",
-                height: "80px",
-                width: "80px",
-                name: "PEIP"
-            }],
-            [7, {
-                icon: sebben,
-                height: "80px",
-                width: "80px",
-                name: "Sebben"
-            }],
-        ]
-    )
-    const rawHistory = t("history", { returnObjects: true });
+  const pictures = new Map<number, PictureInfo>([
+    [0, { icon: carsatam, url: "https://www.carsat-alsacemoselle.fr/", height: "120px", width: "120px", name: "Carsat Alsace-Moselle" }],
+    [1, { icon: carsatam, url: "https://www.carsat-alsacemoselle.fr/", height: "120px", width: "120px", name: "Carsat Alsace-Moselle" }],
+    [2, { icon: cnam, url: "https://www.cnam-grandest.fr/formations/cyc9105a/", height: "120px", width: "120px", name: "Conservatoire National des Arts et Métiers" }],
+    [3, { icon: carsatam, url: "https://www.carsat-alsacemoselle.fr/", height: "120px", width: "120px", name: "Carsat Alsace-Moselle" }],
+    [4, { icon: fml, url: "https://www.fmlogistic.com/fr/", height: "120px", width: "120px", name: "FM Logistic" }],
+    [5, { icon: orsay, url: "https://www.orsay.de/", height: "120px", width: "120px", name: "Orsay" }],
+    [6, { icon: uds, url: "https://mathinfo.unistra.fr/formations/licence-professionnelle/licence-professionnelle-administration-de-reseaux-et-services/", height: "120px", width: "120px", name: "Lycée Alphonse Heinrich" }],
+    [7, { icon: orsay_old, url: "https://www.orsay.de/", height: "120px", width: "120px", name: "Orsay" }],
+    [8, { icon: ah, url: "https://lycee-heinrich-nessel.fr/index.php/enseignement-superieur", height: "120px", width: "120px", name: "Lycée Alphonse Heinrich" }],
+    [9, { icon: ulp, url: "https://ecogestion.unistra.fr/formations/licences/economie-et-gestion/", height: "120px", width: "120px", name: "Université Louis Pasteur" }],
+    [10, { icon: am, url: "https://cite-maurois.monbureaunumerique.fr/", height: "120px", width: "120px", name: "Lycée André-Maurois" }],
+  ]);
 
-    const historyItems: HistoryItem[] = Array.isArray(rawHistory)
-    ? (rawHistory as HistoryItem[])
-    : [];
+  const rawHistory = t("history", { returnObjects: true });
+  const historyItems: HistoryItem[] = Array.isArray(rawHistory) ? (rawHistory as HistoryItem[]) : [];
 
-    return (
+  type Years = { start: string | null; end: string | null };
+
+  const currentLang = (i18n.language ?? 'fr').split('-')[0]; // "fr", "en", "de" (le split gère les cas "fr-FR", "en-US", etc.)
+
+  const monthNames: { [lang: string]: { [key: string]: string } } = {
+    fr: {
+      '01': 'Janvier', '02': 'Février', '03': 'Mars', '04': 'Avril',
+      '05': 'Mai', '06': 'Juin', '07': 'Juillet', '08': 'Août',
+      '09': 'Septembre', '10': 'Octobre', '11': 'Novembre', '12': 'Décembre'
+    },
+    en: {
+      '01': 'January', '02': 'February', '03': 'March', '04': 'April',
+      '05': 'May', '06': 'June', '07': 'July', '08': 'August',
+      '09': 'September', '10': 'October', '11': 'November', '12': 'December'
+    },
+    de: {
+      '01': 'Januar', '02': 'Februar', '03': 'März', '04': 'April',
+      '05': 'Mai', '06': 'Juni', '07': 'Juli', '08': 'August',
+      '09': 'September', '10': 'Oktober', '11': 'November', '12': 'Dezember'
+    }
+  };
+
+  const extractYears = (dateStr: string): Years => {
+    const years = dateStr.match(/\d{4}/g);
+    if (!years) return { start: null, end: null };
+
+    const endWord = dateStr.match(/[-–]\s*([^\d\s][^\d]*)\s*$/);
+    const monthYearPattern = /(\d{2})\/(\d{4})/g;
+    const matches = [...dateStr.matchAll(monthYearPattern)];
+
+    // Récupérer les mois dans la bonne langue, fallback sur 'en' si langue inconnue
+    const months = monthNames[currentLang] ?? monthNames['en'];
+
+    let start: string | null = null;
+    let end: string | null = null;
+
+    if (matches.length >= 1) {
+      const monthStart = months[matches[0][1]] ?? null;
+      start = monthStart ? `${monthStart} ${matches[0][2]}` : matches[0][2];
+    } else {
+      start = years[0];
+    }
+
+    if (endWord) {
+      end = endWord[1].trim();
+    } else if (matches.length >= 2) {
+      const monthEnd = months[matches[1][1]] ?? null;
+      end = monthEnd ? `${monthEnd} ${matches[1][2]}` : matches[1][2];
+    } else if (years.length > 1) {
+      end = years[1];
+    }
+
+    return { start, end };
+  };
+
+  return (
     <Container id="History" className="pt-5">
-        <Row className="mb-4 justify-content-center">
+      <Row className="mb-4 justify-content-center">
         <Col xs={true} md={8} className="pt-2 pb-2">
-            <Badge>
-            <h2 className="mytitle titles rounded">
-                {t("navbar.history")}
-            </h2>
-            </Badge>
+          <Badge>
+            <h2 className="titles rounded">{t("navbar.history")}</h2>
+          </Badge>
         </Col>
-        </Row>
+      </Row>
 
-        <VerticalTimeline lineColor={"#ddd"}>
+      <VerticalTimeline lineColor={"#ddd"} layout="2-columns">
         {historyItems.map((historyItem, idx) => {
-            const picture = pictures.get(idx);
+          const picture = pictures.get(idx);
+          const { start, end } = extractYears(historyItem.date);
+          const color = historyItem.job ? JOB_COLOR : EDU_COLOR;
+          const lightColor = historyItem.job ? 'rgba(33, 149, 243, 0.15)' : 'rgba(233, 30, 99, 0.15)';
+          const dateLabel = start
+            ? end && start !== end
+              ? `${start} → ${end}`
+              : start
+            : historyItem.date;
 
-            return (
+          return (
             <VerticalTimelineElement
-                key={idx}
-                dateText={historyItem.date}
-                style={
-                historyItem.job
-                    ? { color: "#e86971" }
-                    : { color: "#61b8ff" }
-                }
-                className="longDate"
+              key={idx}
+              className={historyItem.job ? 'vertical-timeline-element--work' : 'vertical-timeline-element--education'}
+              contentStyle={{
+                background: lightColor,
+                color: '#333',
+                border: `2px solid ${color}`
+              }}
+              contentArrowStyle={{ borderRight: `7px solid ${color}` }}
+              date={dateLabel}
+              iconStyle={{ background: color, color: '#fff' }}
+              icon={historyItem.job ? <MdWork /> : <MdSchool />}
             >
-                <h4>{historyItem.title}</h4>
+              <h3 className="vertical-timeline-element-title" style={{ color: color }}>{historyItem.title}</h3>
 
-                {picture && (
-                <a
-                    href={picture.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Figure className="mt-4">
+              {picture && (
+                <a href={picture.url} target="_blank" rel="noopener noreferrer">
+                  <Figure className="mt-4">
                     <Figure.Image
-                        height={picture.height}
-                        width={picture.width}
-                        alt={picture.name}
-                        src={picture.icon}
+                      height={picture.height}
+                      width={picture.width}
+                      alt={picture.name}
+                      src={picture.icon}
                     />
-                    </Figure>
+                  </Figure>
                 </a>
-                )}
+              )}
 
-                <p className="text-left">
+              <p className="text-left" style={{ color: '#333' }}>
                 <Trans i18nKey={`history[${idx}].body`}>
-                    <strong></strong> {historyItem.body}
+                  <strong></strong> {historyItem.body}
                 </Trans>
-                </p>
+              </p>
             </VerticalTimelineElement>
-            );
+          );
         })}
-        </VerticalTimeline>
+
+        <VerticalTimelineElement
+          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+          icon={<MdStar />}
+        />
+      </VerticalTimeline>
     </Container>
-    );
+  );
 }

@@ -26,154 +26,171 @@
     "english": "English",
     "german": "German"
   },
-  "history":[
+  "history": [
     {
-			"date": "01/2021 - Now",
-			"title": "GreenDelta - Berlin",
-			"body": "<0>Sofwtare and Web development</0> : Work in different open-source projects, in the sustainability development. New feature for the openLCA (Java), software that performs Life Cycle Assessment, and creation of a light web version of openLCA in the construction field (React).",
-      "job": true
-		},
-    {
-      "date": "06/2020 - 09/2020",
-      "title": "Enovacom, Marseille",
-      "body": "<0>Software internationalization</0> : Implementation of a RESTful API respecting the FHIR communication standard in order to allow a dialogue between a directory software and any other FHIR compatible third party application. Software development (Java).",
+      "date": "05/2019 - Now",
+      "title": "Carsat Alsace-Moselle, Strasbourg",
+      "body": "<0>Web and software development</0>: Middleware Developer initially in the enterprise service bus team, developing orchestration services under WebMethods. I quickly contributed to other new projects and technical debt reduction projects as a designer-developer or project lead.<br>I was able to implement various REST APIs, design a data model following the company's project lifecycle, and migrate applications (GWT Front to Angular, JDK8 to JDK11, JDK17 then JDK21, etc.).",
       "job": true
     },
     {
-      "date": "05/2019 - 08/2019",
-      "title": "Motion Picture Association of America, Bruxelles",
-      "body": "<0>Automatisation of Web investigation </0>: Website creation, in order to centralize multiple scripts that automatize the investigation about some infringing website, which are puting some illegal content on internet. Web Programmation (Jquery, PHP,Python ...)",
+      "date": "02/2018 - 04/2019",
+      "title": "Carsat Alsace-Moselle, Strasbourg",
+      "body": "<0>Final year project</0>: Creation of a unique resource repository project. Its objective is to locate employees and other material resources in the headquarters and agency offices, in order to help the company save operating costs.",
       "job": true
     },
     {
-      "date": "2016 - 2020",
-      "title": "IT Engineering",
-      "body": "Polytech, Engineering school of the Grenoble Alpes University - 5th year",
+      "date": "2016 - 2022",
+      "title": "CNAM Grand Est Engineering School, Strasbourg",
+      "body": "Computer Science specialty - Information Systems (ISI), 5th year. This evening course training consists of various teaching units and the engineering degree is validated by a 6-month IT project in a company.",
       "job": false
     },
     {
-      "date": "Summer 2018",
-      "title": "MacDonald's, Marseille",
-      "body": "<0>Multi-tasked teammate</0> : Participation in the preparation of orders in the kitchen",
+      "date": "07/2015 - 01/2018",
+      "title": "Carsat Alsace-Moselle, Strasbourg",
+      "body": "<0>IT field technician</0>: IT equipment fleet management (1300 desktop and laptop PCs, 500 printers) across more than twenty geographical sites for approximately 1000 users within a team of 3 technicians. Level 1 and 2 incident resolution. User training on new tools.",
       "job": true
     },
     {
-      "date": "Summer 2017",
-      "title": "Deliveroo, Grenoble",
-      "body": "<0>Self-employed</0> : Food delivery by bike.",
+      "date": "02/2013 - 09/2014",
+      "title": "FM Logistic, Phalsbourg",
+      "body": "<0>Level 1 customer support technician</0>: Providing daily support to users and IT staff across the group, covering various technical areas (rights management, system incidents, network and business applications). Coordinating and assigning requests to the relevant teams when needed.",
       "job": true
     },
     {
-      "date": "2014 - 2016",
-      "title": "PEIP, Marseille",
-      "body": "Preparatory classes : two-year undergraduate intensive course in mathematics, physics, chemistry, and IT",
+      "date": "07/2011 - 08/2012",
+      "title": "Orsay GmbH, Willstätt-Sand",
+      "body": "During my professional degree, I participated in a network infrastructure redesign project for 250 stores across Germany, Switzerland and Austria (homogeneity and scalability of the network infrastructure despite local differences) and coordination (external partners and internal teams).<br>In parallel, I maintained the IT equipment and participated in the renewal of 130 laptops within the operational production department.",
+      "job": true
+    },
+    {
+      "date": "09/2011 - 09/2012",
+      "title": "LP SIL ARS, Strasbourg",
+      "body": "Professional Degree in Computer and Software Systems, Network and Services Administration option",
       "job": false
     },
     {
-      "date": "Summer 2014 & 2015",
-      "title": "SEBBEN, Toulon",
-      "body": "<0>Cleaning professionals</0> : cleaning service in buildings shared",
+      "date": "07/2011 - 08/2012",
+      "title": "Orsay GmbH, Willstätt-Sand",
+      "body": "<0>End of first year BTS internship</0>: First, I created a Windows 7 disk image for cash registers to test the compatibility of existing tools (under Windows XP) in preparation for a future deployment. Then, I studied and compared temporary solutions for out-of-service cash registers, evaluating their feasibility and viability in a business context.",
       "job": true
     },
     {
-      "date": "2014",
-      "title": "Scientific baccalaureate and specialization in Computer Science and Digital Science",
-      "body": "German Bacalaureat : AbiBac (German literature and history)",
+      "date": "09/2009 - 06/2011",
+      "title": "BTS IRIS, Haguenau",
+      "body": "Higher National Certificate in IT and Networks for Industry and Technical Services",
+      "job": false
+    },
+    {
+      "date": "09/2006 - 06/2008",
+      "title": "Economics and Management Degree (Not graduated), Strasbourg",
+      "body": "Economics and Management Degree",
+      "job": false
+    },
+    {
+      "date": "06/2006",
+      "title": "Scientific Baccalaureate, Bischwiller",
+      "body": "Scientific Baccalaureate, specialty Life and Earth Sciences (S.V.T), Physics-Chemistry option",
       "job": false
     }
   ],
   "skills": {
-    "system": "System development",
-    "software": "Software development",
-    "web": "Web development",
-    "other": "Others"
+    "system": "System Development",
+    "software": "Software Development",
+    "web": "Web Development",
+    "other": "Others",
+    "esb": "Middleware Development"
   },
   "wip": {
     "title": "Work in progress",
     "body": "This website is currently under development. It will be updated regularly"
   },
   "hobbies": {
-    "it": "IT",
-    "read": "Reading (fantasy novel)",
-    "music": "Music (8 years of piano)",
-    "frisbee": "Ultimate Frisbee : Team leader of my school, sport licence in a club",
-    "badminton": "Badminton (11 years)",
-    "basketball": "Basket-ball",
-    "pingpong": "Table tennis"
+    "it": "Software Development",
+    "training": "Cycling, running, strength training",
+    "sport": "Jiu-Jitsu (brown belt)"
   },
   "projects": {
     "0": {
-      "title": "<0>Web CV</0>, 2020 - 1 month",
-      "body": "Web CV creation, with React. It is a personnal project, in order to master React. Deployement in production with the help of Netlify, on a custom domain name registered on Google Domains."
+      "title": "<0>MyRobots</0>, 2026 - 3 months",
+      "body": "Creation of a robot buying/selling website similar to Vinted."
     },
     "1": {
-      "title": "<0>Kine 2.0</0>, 2020 - 3 month",
-      "body": "Creation of 2 websites : one for the physiotherapist, so they can manage their patients, and monitor their activities, and one for the patients, so they can do their rehabilitation exercise at home. This project was carried out at the request of our client Vestib+, which is a Kinesitherapy practice specializing in balance disorders."
-    },
-    "2": {
-      "title": "<0>Guc Voile</0>, 2019 - 2.5 month",
-      "body": "Creation of a website that helps the sailing club member to rent some sailing equipment in advance, and helps the club owners to monitor the sailing equipment. Generated with the help of JHipster."
-    },
-    "3": {
-      "title": "<0>COLORicm</0>, 2018 - 3 weeks",
-      "body": "As a group Leader of a team of 6, we developped a 2D video game in java (swing), with real-time controls and modular features, involving automatons, introducing the notion of artificial intelligence."
+      "title": "<0>Web CV</0>, 2026 - 1 month",
+      "body": "Creation of a web CV with React. This is a personal project aimed at learning React. Production deployment is done through GitHub Actions, on a domain name registered with OVH."
     }
   },
   "travel": {
     "germany": {
       "country": "Germany",
-      "munich": "Munich",
-      "munster": "Münster",
-      "hamburg": "Hamburg",
-      "berlin": "Berlin"
+      "berlin": "Berlin",
+      "frankfurt": "Frankfurt",
+      "speyer": "Speyer",
+      "heidelberg": "Heidelberg"
+    },
+    "poland": {
+      "country": "Poland",
+      "wroclaw": "Wrocław",
+      "warsaw": "Warsaw"
     },
     "tchequie": {
       "country": "Czech Republic",
       "prague": "Prague"
     },
-    "belgium": {
-      "country": "Belgium",
-      "brussels": "Brussels",
-      "liege": "Liège"
-    },
-    "canada": {
-      "country": "Canada",
-      "montreal": "Montreal",
-      "tadoussac": "Tadoussac",
-      "sherbrooke": "Sherbrooke",
-      "quebec": "Quebec"
+    "netherlands": {
+      "country": "Netherlands",
+      "amsterdam": "Amsterdam"
     },
     "spain": {
       "country": "Spain",
       "barcelona": "Barcelona",
-      "palma": "Palma de Mallorca"
+      "calpe": "Calpe",
+      "altea": "Altea",
+      "benidorm": "Benidorm",
+      "alicante": "Alicante"
     },
-    "italy": {
-      "country": "Italy",
-      "roma": "Roma",
-      "naples": "Naples",
-      "pompei": "Pompei"
-    },
-    "greece": {
-      "country": "Greece",
-      "athens": "Athens",
-      "corinth": "Corinth"
-    },
-    "us": {
-      "country": "United States",
-      "ny": "New York"
-    },
-    "uk": {
-      "country": "United Kingdom",
-      "ireland": "Ireland"
+    "croatia": {
+      "country": "Croatia",
+      "dubrovnik": "Dubrovnik"
     },
     "fr": {
       "country": "France",
-      "marseille": "Marseille"
+      "lille": "Lille",
+      "paris": "Paris",
+      "montpellier": "Montpellier",
+      "marseille": "Marseille",
+      "mont_saint_michel": "Mont-Saint-Michel",
+      "limoges": "Limoges",
+      "tours": "Tours",
+      "la_plagne": "La Plagne",
+      "avoriaz": "Avoriaz",
+      "val_thorens": "Val Thorens",
+      "issoire": "Issoire",
+      "bourges": "Bourges",
+      "clermont_ferrand": "Clermont-Ferrand",
+      "honfleur": "Honfleur",
+      "le_havre": "Le Havre",
+      "valras_plage": "Valras-Plage",
+      "port_camargue": "Port-Camargue",
+      "tourouvre": "Tourouvre",
+      "verdun": "Verdun"
     },
-    "sweden": {
-      "country": "Sweden",
-      "stockholm": "Stockholm"
+    "austria": {
+      "country": "Austria",
+      "ischgl": "Ischgl",
+      "mayrhofen": "Mayrhofen"
+    },
+    "turkey": {
+      "country": "Turkey",
+      "istanbul": "Istanbul",
+      "ankara": "Ankara",
+      "mordogan": "Mordoğan",
+      "izmir": "Izmir",
+      "pamukkale": "Pamukkale"
+    },
+    "bosnia": {
+      "country": "Bosnia-Herzegovina",
+      "mostar": "Mostar"
     }
   }
 }

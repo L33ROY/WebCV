@@ -1,12 +1,13 @@
 import geojson from "geojson";
 import L, { LatLngLiteral, Layer } from "leaflet";
+import "leaflet/dist/leaflet.css";
 import React, { FC, useEffect, useMemo, useState } from "react";
 import { Badge, Col, Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import {
+  GeoJSON,
   MapContainer,
   TileLayer,
-  GeoJSON,
   useMap,
   useMapEvents,
 } from "react-leaflet";
@@ -34,9 +35,16 @@ function MapEvents({ onZoom }: { onZoom: (z: number) => void }) {
       onZoom(e.target.getZoom());
     },
   });
-
   return null;
 }
+
+/* --------------------------- ICONE MARKER --------------------------- */
+
+const cityIcon = L.icon({
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
 
 /* --------------------------- MARKERS LAYER --------------------------- */
 
@@ -53,7 +61,7 @@ const MarkersLayer: FC<{
 
     if (zoom >= 4 && !markersAdded) {
       cities.forEach((c: Position) => {
-        L.marker(c.latlng)
+        L.marker(c.latlng, { icon: cityIcon })
           .addTo(map)
           .bindTooltip(
             Array.isArray(c.tooltip)
@@ -61,7 +69,6 @@ const MarkersLayer: FC<{
               : t(c.tooltip)
           );
       });
-
       setMarkersAdded(true);
     }
 
@@ -71,7 +78,6 @@ const MarkersLayer: FC<{
           map.removeLayer(layer);
         }
       });
-
       setMarkersAdded(false);
     }
   }, [zoom, map, markersAdded, setMarkersAdded, t]);
@@ -98,19 +104,16 @@ const CustomMap: FC = () => {
       <GeoJSON
         data={data}
         style={() => ({
-          color: "#4a83ec",
+          color: "#0F6E56",
           weight: 1,
-          fillColor: "#1a1d62",
-          fillOpacity: 0.25,
+          fillColor: "#1D9E75",
+          fillOpacity: 0.35,
         })}
         onEachFeature={(feature, layer) => {
           layer.on({
             mouseover: (e: any) => {
-              const country =
-                countries[e.target.feature.properties.adm0_a3];
-
+              const country = countries[e.target.feature.properties.adm0_a3];
               if (!country) return;
-
               layer.bindTooltip(
                 Array.isArray(country.tooltip)
                   ? country.tooltip.map((c: string) => t(c)).join(", ")
@@ -151,7 +154,10 @@ const CustomMap: FC = () => {
         setMarkersAdded={setMarkersAdded}
       />
 
-      <TileLayer url="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=TON_TOKEN" />
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
 
       {state.displayGeoJson && geoJson}
     </MapContainer>
@@ -168,9 +174,7 @@ export const Travels: FC = () => {
       <Row className="mb-4 justify-content-center">
         <Col xs={8} className="pt-2 pb-2">
           <Badge>
-            <h2 className="mytitle titles rounded">
-              {t("navbar.travel")}
-            </h2>
+            <h2 className="titles rounded">{t("navbar.travel")}</h2>
           </Badge>
         </Col>
       </Row>

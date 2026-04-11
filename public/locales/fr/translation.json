@@ -30,7 +30,13 @@
 		{
 			"date": "05/2019 - Maintenant",
 			"title": "Carsat Alsace-Moselle, Strasbourg",
-			"body": "<0>Dévelopement web et logiciel</0> : Développeur Middleware dans un premier temps dans l'équipe bus d'entreprise en développant des services d'orchestrations sous WebMethods, j'ai rapidement contribué à d'autres équipes dans le cadre de nouveaux projets ainsi que des projets de rénovations du SI en tant que concepteur-développeur ou pilote de réalisation.<br>J'ai pu mettre en place diverses API REST, concevoir un modèle de données en respectant le cahier des charges, migrer des applications (Front GWT vers Angular, passage de JDK8 vers JDK11, etc.).",
+			"body": "<0>Dévelopement web et logiciel</0> : Développeur Middleware dans un premier temps dans l'équipe bus d'entreprise en développant des services d'orchestrations sous WebMethods, j'ai rapidement contribué à d'autres nouveaux projets et projets de réduction de dette technique du SI en tant que concepteur-développeur ou pilote de réalisation.<br>J'ai pu mettre en place diverses API REST, concevoir un modèle de données en respectant le cycle de vie projet défini par l'entreprise, migrer des applications (Front GWT vers Angular, passage de JDK8 vers JDK11, JDK17 puis JDK21, etc.).",
+			"job": true
+		},
+		{
+			"date": "02/2018 - 04/2019",
+			"title": "Carsat Alsace-Moselle, Strasbourg",
+			"body": "<0>Projet de fin d'étude</0> : Création d'un projet de référentiel unique de ressources. Son objectif est de localiser les collaborateurs ainsi que d'autres ressources matérielles dans les bureaux du siège et des agences afin de permettre à l'entreprise d'économiser des coûts de fonctionnements.",
 			"job": true
 		},
 		{
@@ -39,47 +45,52 @@
 			"body": "Spécialité informatique Systèmes d'information (ISI), 5ème année. Cette formation en cours du soir est composée de différentes unités d'enseignements et le diplôme d'ingénieur est sanctionné par la réalisation d'un projet informatique en entreprise d'une durée de 6 mois.",
 			"job": false
 		},
-    	{
-			"date": "02/2018 - 04/2019",
-			"title": "Carsat Alsace-Moselle, Strasbourg",
-			"body": "<0>Projet de fin d'étude</0> : Création d'un projet de référentiel unique de ressources. Son objectif est de localiser les collaborateurs ainsi que d'autres ressources matérielles dans les bureaux du siège et des agences afin de permettre à l'entreprise d'économiser des coûts de fonctionnements.",
-			"job": false
-		},
-    	{
+		{
 			"date": "07/2015 - 01/2018",
 			"title": "Carsat Alsace-Moselle, Strasbourg",
-			"body": "<0>Technicien informatique de proximité</0> : Gestion de parc du matériel informatique (1300 PC de bureau et PC portable, 500 imprimantes) sur plus d'une vingtaine de sites géographiques pour environ 1000 utilisateurs au sein d'une équipe de 3 techniciens. Résolution d'incidents de niveau 2. Formation utilisateur aux nouveaux outils.",
-			"job": false
-		},
-
-    	{
-			"date": "02/2013 - 09/2014",
-			"title": "FM Logistic, Phalsbourg",
-			"body": "<0>Technicien support client</0> : Support de niveau 1 Participation en cuisine à la préparation des commandes en suivant le protocole et les recettes préalablement définis",
-			"job": false
-		},
-    {
-			"date": "07/2011 - 08/2012",
-			"title": "Deliveroo, Grenoble",
-			"body": "<0>Auto-entrepreneur</0> : Livraison à domicile de nourriture à vélo.",
-			"job": false
-		},
-    {
-			"date": "2014 - 2016",
-			"title": "Parcours des Élèves Ingénieurs Polytech (PEIP), Marseille",
-			"body": "Classe préparatoire intégrée à Polytech (Mathématique, Physique, Chimie, Informatique)",
-			"job": false
-		},
-    {
-			"date": "Eté 2014 & 2015",
-			"title": "SEBBEN, Toulon",
-			"body": "<0>Entreprise multi-services</0> : Nettoyage des parties communes d'immeubles",
+			"body": "<0>Technicien informatique de proximité</0> : Gestion de parc du matériel informatique (1300 PC de bureau et PC portable, 500 imprimantes) sur plus d'une vingtaine de sites géographiques pour environ 1000 utilisateurs au sein d'une équipe de 3 techniciens. Résolution d'incidents de niveau 1 et 2. Formation utilisateur aux nouveaux outils.",
 			"job": true
 		},
-    {
-			"date": "06/2016",
-			"title": "Bac S spécialité Informatique et Science du Numérique",
-			"body": "Double cursus AbiBac (littérature et histoire allemande)",
+		{
+			"date": "02/2013 - 09/2014",
+			"title": "FM Logistic, Phalsbourg",
+			"body": "<0>Technicien support client niveau 1</0> : Assurer le support quotidien des utilisateurs et informaticiens dans un périmètre groupe, couvrant des domaines techniques variés (gestion des droits, incidents système, réseau et applications métiers). Coordonner et affecter les demandes aux équipes compétentes en cas de besoin.",
+			"job": true
+		},
+		{
+			"date": "07/2011 - 08/2012",
+			"title": "Orsay GmbH, Willstätt-Sand",
+			"body": "Durant ma Licence professionnelle, j’ai participé à un projet de refonte de l'infrastructure réseau pour 250 magasins répartis en Allemagne, Suisse et Autriche (homogénéité et évolutivité de l'infrastructure réseau malgré les différences locales) et coordination (partenaires externes et équipes internes). <br>En parallèle, j’ai maintenu le parc informatique et participé au renouvellement de 130 PC portables au sein du service production opérationnelle.",
+			"job": true
+		},
+		{
+			"date": "09/2011 - 09/2012",
+			"title": "LP SIL ARS, Strasbourg",
+			"body": "Licence Professionnelle Systèmes Informatiques et Logiciels option Administration de Réseaux et Services",
+			"job": false
+		},
+		{
+			"date": "07/2011 - 08/2012",
+			"title": "Orsay GmbH, Willstätt-Sand",
+			"body": "<0>Stage de fin 1ère année de BTS</0> : Dans un premier temps, j'ai créé une image disque Windows 7 pour les caisses enregistreuses, afin de tester la compatibilité des outils existants (sous Windows XP) en vue d’un futur déploiement. Dans un deuxième temps, j’ai étudié et comparé des solutions temporaires pour les caisses hors service, en évaluant leur faisabilité et leur viabilité en entreprise.",
+			"job": true
+		},
+		{
+			"date": "09/2009 - 06/2011",
+			"title": "BTS IRIS, Haguenau",
+			"body": "Brevet de Technicien Supérieur Informatique et Réseaux pour l'Industrie et les Services techniques",
+			"job": false
+		},
+		{
+			"date": "09/2006 - 06/2008",
+			"title": "Licence d'économie gestion (Non diplômé), Strasbourg",
+			"body": "Licence d'économie gestion",
+			"job": false
+		},
+		{
+			"date": "06/2006",
+			"title": "Bac Scientifique, Bischwiller",
+			"body": "Baccalauréat Scientifique Option de spécialité Science et Vie de la Terre (S.V.T) spécialité Physique-Chimie",
 			"job": false
 		}
 	],
@@ -87,90 +98,134 @@
 		"system": "Dévelopement Systeme",
 		"software": "Développement Logiciel",
 		"web": "Développement Web",
-		"other": "Autres"
+		"other": "Autres",
+		"esb": "Dévelopement intergiciel"
 	},
-	"hobbies": {
-		"it": "Développement Informatique",
-		"read": "Lecture (roman fantastique)",
-		"music": "Musique (7 ans de piano et solfège)",
-		"frisbee": "Ultimate Frisbee : Leader de l'equipe de mon école, licence sportive dans un club",
-		"badminton": "Badminton (11 ans)",
-		"basketball": "Basket-ball",
-		"pingpong": "Tennis de table"
-	},
+	"hobbies": [
+		{
+			"category": "Sports",
+			"icon": "FaRunning",
+			"items": [
+				{
+					"label": "Vélo",
+					"icon": "FaBicycle"
+				},
+				{
+					"label": "Course à pied",
+					"icon": "FaRunning"
+				},
+				{
+					"label": "Renforcement musculaire",
+					"icon": "FaDumbbell"
+				},
+				{
+					"label": "Jiu-Jitsu (ceinture marron)",
+					"icon": "GiBlackBelt"
+				}
+			]
+		},
+		{
+			"category": "Cryptomonnaie",
+			"icon": "FaBitcoin",
+			"items": [
+				{
+					"label": "Trading et investissement",
+					"icon": "FaChartLine"
+				}
+			]
+		},
+		{
+			"category": "Informatique",
+			"icon": "FaCode",
+			"items": [
+				{
+					"label": "Développement web et logiciel",
+					"icon": "FaCode"
+				}
+			]
+		}
+	],
 	"projects": {
 		"0": {
-			"title": "<0>Web CV</0>, 2020 - 1 mois",
-			"body": "Création d'un web CV avec React. Il s'agit d'un projet personnel, visant à prendre en main react. Le déploiement en production à été fait grâce à Netlify, sur un nom de domaine enregistré sur Google Domains."
+			"title": "<0>MyRobots</0>, 2026 - 3 mois",
+			"body": "Création d'un site d'achat / vente de robots à la manière de Vinted."
 		},
 		"1": {
-			"title": "<0>Kine 2.0</0>, 2020 - 3 mois",
-			"body": "Création de 2 sites web : un pour les kinesithérapeuthes afin qu'ils gèrent leur patient, et puissent suivre leurs activitées, et un pour les patients, afin qu'ils puissent faire leurs exercices de rééducation à la maison. Ce projet à été réalisé à la demande de notre client Vestib+, qui est un cabinet de Kinesithérapie, spécialisé dans les troubles de l'équilibre."
-		},
-		"2": {
-			"title": "<0>Guc Voile</0>, 2019 - 2,5 mois",
-			"body": "Création d'un site de e-commerce permettant la location de materiel de voile pour les membres du club Guc voile de Grenoble, et permettant la gestion des stocks pour les gérants du club. Généré à l'aide de JHipster."
-		},
-		"3": {
-			"title": "<0>COLORicm</0>, 2018 - 3 semaines",
-			"body": "En tant que chef de groupe d'une équipe de 6 développeur, nous avons créé un jeu vidéo 2D en Java (swing), avec des controles en temps réels et des fonctionnalités modulaires, impliquants des automates, ce qui a permis de nous sensibiliser à la notion d'Intelligence Artificielle."
+			"title": "<0>Web CV</0>, 2026 - 1 mois",
+			"body": "Création d'un web CV avec React. Il s'agit d'un projet personnel, visant à prendre en main react. Le déploiement en production se fait grâce à GitHub Actions, sur un nom de domaine enregistré sur OVH."
 		}
 	},
 	"travel": {
 		"germany": {
 			"country": "Allemagne",
-			"munich": "Munich",
-			"munster": "Münster",
-			"hamburg": "Hambourg",
-			"berlin": "Berlin"
+			"berlin": "Berlin",
+			"frankfurt": "Francfort",
+			"speyer": "Spire",
+			"heidelberg": "Heidelberg"
+		},
+		"poland": {
+			"country": "Pologne",
+			"wroclaw": "Wrocław",
+			"warsaw": "Varsovie"
 		},
 		"tchequie": {
 			"country": "Tchéquie",
 			"prague": "Prague"
 		},
-		"belgium": {
-			"country": "Belgique",
-			"brussels": "Bruxelles",
-			"liege": "Liège"
-		},
-		"canada": {
-			"country": "Canada",
-			"montreal": "Montreal",
-			"tadoussac": "Tadoussac",
-			"sherbrooke": "Sherbrooke",
-			"quebec": "Québec"
+		"netherlands": {
+			"country": "Pays-Bas",
+			"amsterdam": "Amsterdam"
 		},
 		"spain": {
 			"country": "Espagne",
 			"barcelona": "Barcelone",
-			"palma": "Palma de Majorque"
+			"calpe": "Calpe",
+			"altea": "Altea",
+			"benidorm": "Benidorm",
+			"alicante": "Alicante"
 		},
-		"italy": {
-			"country": "Italie",
-			"roma": "Rome",
-			"naples": "Naples",
-			"pompei": "Pompéi"
-		},
-		"greece": {
-			"country": "Grèce",
-			"athens": "Athènes",
-			"corinth": "Corinthe"
-		},
-		"us": {
-			"country": "Etats Unis",
-			"ny": "New York"
-		},
-		"uk": {
-			"country": "Royaume-Uni",
-			"ireland": "Irlande"
+		"croatia": {
+			"country": "Croatie",
+			"dubrovnik": "Dubrovnik"
 		},
 		"fr": {
 			"country": "France",
-			"marseille": "Marseille"
+			"lille": "Lille",
+			"paris": "Paris",
+			"montpellier": "Montpellier",
+			"marseille": "Marseille",
+			"mont_saint_michel": "Mont-Saint-Michel",
+			"limoges": "Limoges",
+			"tours": "Tours",
+			"la_plagne": "La Plagne",
+			"avoriaz": "Avoriaz",
+			"val_thorens": "Val Thorens",
+			"issoire": "Issoire",
+			"bourges": "Bourges",
+			"clermont_ferrand": "Clermont-Ferrand",
+			"honfleur": "Honfleur",
+			"le_havre": "Le Havre",
+			"valras_plage": "Valras-Plage",
+			"port_camargue": "Port-Camargue",
+			"tourouvre": "Tourouvre",
+			"verdun": "Verdun"
 		},
-		"sweden": {
-			"country": "Suède",
-			"stockholm": "Stockholm"
+		"austria": {
+			"country": "Autriche",
+			"ischgl": "Ischgl",
+			"mayrhofen": "Mayrhofen"
+		},
+		"turkey": {
+			"country": "Turquie",
+			"istanbul": "Istanbul",
+			"ankara": "Ankara",
+			"mordogan": "Mordoğan",
+			"izmir": "Izmir",
+			"pamukkale": "Pamukkale"
+		},
+		"bosnia": {
+			"country": "Bosnie-Herzégovine",
+			"mostar": "Mostar"
 		}
 	}
 }

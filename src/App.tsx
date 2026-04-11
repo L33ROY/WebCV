@@ -10,7 +10,6 @@ import {
 } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
-import { AiOutlineGitlab } from 'react-icons/ai';
 import {
   FaArrowAltCircleUp, FaGithub, FaLinkedin
 } from 'react-icons/fa';
@@ -118,14 +117,11 @@ const AppHeader: FC = () => {
             </Col>
           </Row>
           <Row className="App-header text-center">
-            <Col xs={4} className="text-right">
-              <IconSocial href="https://www.linkedin.com/in/l%C3%A9o-jan-065ba8125/" icon={<FaLinkedin />} />
+            <Col xs={6} className="text-right">
+              <IconSocial href="https://fr.linkedin.com/in/leeroy-wack-4bb100168/" icon={<FaLinkedin />} />
             </Col>
-            <Col xs={4} className="">
-              <IconSocial href="https://github.com/TheTisiboth" icon={<FaGithub />} />
-            </Col>
-            <Col xs={4} className="text-left">
-              <IconSocial href="https://gitlab.com/TheTisiboth" icon={<AiOutlineGitlab />} />
+            <Col xs={6} className="">
+              <IconSocial href="https://github.com/L33ROY" icon={<FaGithub />} />
             </Col>
           </Row>
         </Col>
@@ -151,7 +147,7 @@ const Footer: FC = () => {
   return (
     <Container>
       <ListGroup horizontal={true} className="justify-content-center copyright pt-2">
-        <ListGroup.Item className="copyright" variant="dark">© 2020 Copyright: Léo Jan</ListGroup.Item>
+        <ListGroup.Item className="copyright" variant="dark">© 2026 Copyright: Leeroy Wack</ListGroup.Item>
       </ListGroup>
       <Row className="justify-content-center">
         <Col md={3}>
